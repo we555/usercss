@@ -1,0 +1,15 @@
+/* ==UserStyle==
+@name           Google Translate
+
+@version        1.0.0
+@author         Unknown
+@description    You can change layout and use dark mode.
+@license        unlicense
+@namespace      github.com/openstyles/stylus
+==/UserStyle== */
+
+/* @ATupdateURL     must be an url */
+
+@-moz-document domain("translate.google.com") {
+
+}
