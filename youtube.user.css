@@ -1,38 +1,67 @@
 /* ==UserStyle==
 @name           Youtube - local
+@description    Hide comments and right column previews, change colors.
 @namespace      github.com/openstyles/stylus
-@version        1.0.0
-@description    A new userstyle
+@version        1.0.1
 @author         Me
 
-@advanced color attention-color "Badges's color" "lime"
+@advanced color page-color "Page background" "#fff"
+@advanced color rcolumn-color "Right column background" "#eee"
+@advanced color attention-color "Badges color" "lime"
 
 @advanced dropdown previews-hide "Show/hide previews (with delay)" {
-  Show "Show" <<<EOT
-  1 EOT;
   Hide "Hide" <<<EOT
   0 EOT;
+  Show "Show" <<<EOT
+  1 EOT;
+}
+
+@advanced dropdown comments-hide "Show/hide comments section" {
+  Hide "Hide" <<<EOT
+  none EOT;
+  Show "Show" <<<EOT
+  block EOT;
 }
 ==/UserStyle== */
 
 
 @-moz-document domain("youtube.com") {
-  .badge.badge-style-type-simple.style-scope.ytd-badge-supported-renderer {
-    background-color: /*[[attention-color]]*/;
-    color: #0007;
-  }
   
-  /* Hide R-Column previews */
-  ytd-thumbnail {
-    background-color: #eee;
-  }
-  #columns > #secondary #dismissable #img {
-    opacity: /*[[previews-hide]]*/ !important;
-    transition-delay: .15s;
-    transition-duration: .93s;
-  }
-  #columns > #secondary:hover #dismissable #img {
-    opacity: 1 !important;
-    transition-delay: .5s;
-  }
+body div#content {
+  background-color: /*[[page-color]]*/;
+}
+
+/* Hide comment section 
+*/
+#primary-inner #sections {
+  display: /*[[comments-hide]]*/;
+}
+
+/* Badges "New","CC" etc. 
+*/
+.badge.badge-style-type-simple.style-scope.ytd-badge-supported-renderer {
+  background-color: /*[[attention-color]]*/;
+  color: #0007;
+}
+
+/* Hide R-Column previews 
+*/
+ytd-thumbnail {
+  background-color: /*[[rcolumn-color]]*/;
+}
+/*   #columns > #secondary #dismissable #img { */
+#related #items #dismissable #img {
+  opacity: /*[[previews-hide]]*/ !important;
+  transition-delay: .15s;
+  transition-duration: .93s;
+}
+/*   #columns > #secondary:hover #dismissable #img { */
+#related #items:hover #dismissable #img {
+  opacity: 1 !important;
+  transition-delay: .5s;
+}
+#related #items:hover {
+  background-color: /*[[rcolumn-color]]*/;
+}
+  
 }
