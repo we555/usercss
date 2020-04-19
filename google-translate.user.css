@@ -1,11 +1,11 @@
 /* ==UserStyle==
 @name           Google Translate Customizable
+@updateURL      https://raw.githubusercontent.com/we555/usercss/master/google-translate.user.css
 
-@version        1.0.3
+@version        1.0.31
 @description    You can change the layout and apply the dark mode color scheme.
 @license        unlicense
 @namespace      github.com/openstyles/stylus
-@updateURL      https://raw.githubusercontent.com/we555/usercss/master/google-translate.user.css
 
 @advanced color base-color "Base color scheme" "hsl(59, 100%, 14%)" 
 @advanced dropdown invert-colors "Color theme" {
