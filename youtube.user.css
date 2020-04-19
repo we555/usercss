@@ -1,8 +1,10 @@
 /* ==UserStyle==
-@name           Youtube - local
+@name           Youtube—No Distraction
+@updateURL      https://raw.githubusercontent.com/we555/usercss/master/youtube.user.css
+
+@version        1.0.11
 @description    Hide comments and right column previews, change colors.
 @namespace      github.com/openstyles/stylus
-@version        1.0.1
 @author         Me
 
 @advanced color page-color "Page background" "#fff"
